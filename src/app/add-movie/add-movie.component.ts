@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MovieService } from '../myservices/movie.service';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-add-movie',
@@ -10,11 +10,11 @@ import { MovieService } from '../myservices/movie.service';
 })
 export class AddMovieComponent {
 
-  constructor (private movieService:MovieService) {
+  constructor (private movieService:MovieService) {}
     addNewMovie(movietitle:HTMLInputElement, moviedirector:HTMLInputElement,movieyear:HTMLInputElement):boolean{
       this.movieService.addMovie(movietitle.value,moviedirector.value,movieyear.value);
       return false;
     }
-  }
+  
 
 }
