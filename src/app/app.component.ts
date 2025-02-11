@@ -22,5 +22,6 @@ export class AppComponent {
     this.movies=this.movieService.getMovies();
     console.log(this.movies);
   }
+  
  
 }
